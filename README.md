@@ -1,29 +1,27 @@
 # tensorflow-gpu-install
 cuda 8.0安装</br>
-ssh zh@10.18.125.30
+ssh zh@10.18.125.30</br>r
+sudo add-apt-repository ppa:graphics-drivers/ppa</br>
+sudo apt-get update</br>
+sudo apt-get install nvidia-375</br>
+sudo apt-get install libcupti-dev</br>
+sudo sh cuda_8.0.44_linux.run</b>
+sudo vim /etc/profile</br>
 
-sudo add-apt-repository ppa:graphics-drivers/ppa
-sudo apt-get update
-sudo apt-get install nvidia-375
-sudo apt-get install libcupti-dev
+export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}</br>
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}</br>
 
-sudo sh cuda_8.0.44_linux.run
-sudo vim /etc/profile
+tar -zxvf cudnn-8.0-linux-x64-v5.1.tgz</br>
+sudo cp cuda/include/cudnn.h /usr/local/cuda/include/ && sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64/</br>
 
-export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-
-tar -zxvf cudnn-8.0-linux-x64-v5.1.tgz
-sudo cp cuda/include/cudnn.h /usr/local/cuda/include/ && sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64/
-
-sudo chmod a+r /usr/local/cuda/include/cudnn.h && sudo chmod a+r /usr/local/cuda/lib64/libcudnn*
+sudo chmod a+r /usr/local/cuda/include/cudnn.h && sudo chmod a+r /usr/local/cuda/lib64/libcudnn*</br>
 
 
 
 PS:
-sudo sh cuda_8.0.44_linux.run 驱动安装选择NO
+sudo sh cuda_8.0.44_linux.run 驱动安装选择NO</br>
 
 修改：
-nano .bashrc
-vim .bashrc
-source ~/.bashrc
+nano .bashrc</br>
+vim .bashrc</br>
+source ~/.bashrc</br>
