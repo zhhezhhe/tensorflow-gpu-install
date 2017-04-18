@@ -14,13 +14,13 @@ export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY
 OR</br>
 cd /etc/ld.so.conf.d/</br>
 
-vim cuda-8-0.conf   modified follow:</br>
+vim cuda-8-0.conf   modified follow:  
 ```
 /usr/local/cuda-8.0/lib64
+```  
 
-```</br>
-sudo ldconfig</br>
-tar -zxvf cudnn-8.0-linux-x64-v5.1.tgz</br>
+sudo ldconfig  
+tar -zxvf cudnn-8.0-linux-x64-v5.1.tgz  
 sudo cp cuda/include/cudnn.h /usr/local/cuda/include/ && sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64/</br>
 
 sudo chmod a+r /usr/local/cuda/include/cudnn.h && sudo chmod a+r /usr/local/cuda/lib64/libcudnn*</br>
