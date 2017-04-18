@@ -25,3 +25,9 @@ sudo sh cuda_8.0.44_linux.run 驱动安装选择NO</br>
 nano .bashrc</br>
 vim .bashrc</br>
 source ~/.bashrc</br>
+# pip 安装 douban
+vim /etc/pip.conf</br>
+
+[global]</br>
+index-url = http://pypi.douban.com/simple/ </br>
+trusted-host = pypi.douban.com</br>
