@@ -1,6 +1,6 @@
 # tensorflow-gpu-install
 cuda 8.0安装</br>
-ssh zh@10.18.125.30</br>r
+ssh zh@10.18.125.30</br>
 sudo add-apt-repository ppa:graphics-drivers/ppa</br>
 sudo apt-get update</br>
 sudo apt-get install nvidia-375</br>
